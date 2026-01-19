@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anime Streaming</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body oncontextmenu="return false">
+
+<header>🎌 Anime Streaming</header>
+
+<!-- Login -->
+<div id="loginBox" {% if owner %}class="hidden"{% endif %}>
+    <h3>Owner Login</h3>
+    <form method="POST" action="/login">
+        <input name="user" placeholder="Username"><br>
+        <input type="password" name="pass" placeholder="Password"><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<!-- Owner Panel -->
+<div id="ownerPanel" {% if not owner %}class="hidden"{% endif %}>
+    <h3>Upload Anime (Owner Only)</h3>
+    <input type="file" id="videoUpload" accept="video/*"><br>
+    <button onclick="uploadVideo()">Upload</button><br><br>
+    <p id="shareLink"></p>
+</div>
+
+<!-- Video Player -->
+<video id="player" controls controlsList="nodownload noplaybackrate" disablePictureInPicture></video>
+
+<p class="copyright">© Another Level Dubber</p>
+
+<canvas id="snowCanvas"></canvas>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

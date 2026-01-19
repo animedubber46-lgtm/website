@@ -1,0 +1,5 @@
+Flask==2.3.2
+pymongo==4.6.1
+requests==2.31.0
+python-telegram-bot==20.4
+gunicorn==21.2.0

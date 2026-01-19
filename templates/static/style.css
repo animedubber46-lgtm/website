@@ -1,0 +1,9 @@
+body { margin:0; background:#0b0b0b; color:white; font-family:Arial; text-align:center; overflow-x:hidden;}
+header{background:#111;color:#ff4d6d;padding:15px;font-size:28px;font-weight:bold;}
+input,button{padding:10px;margin:5px;border-radius:6px;border:none;}
+button{background:#ff4d6d;color:white;cursor:pointer;}
+video{width:80%;max-width:900px;margin-top:20px;border-radius:10px;}
+canvas{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;}
+.hidden{display:none;}
+#shareLink a{color:#ff4d6d;text-decoration:none;}
+#shareLink a:hover{text-decoration:underline;}
